@@ -35,7 +35,7 @@ version: 2.1
 jobs:
   build-frontend:
     docker:
-      - image: cimg/node:14.4.0
+      - image: cimg/node:13.8.0
     steps:
       - checkout
       - restore_cache:
@@ -52,7 +52,7 @@ jobs:
 
   build-backend:
     docker:
-      - image: cimg/node:14.4.0
+      - image: cimg/node:13.8.0
     steps:
       - checkout
       - restore_cache:
@@ -69,7 +69,7 @@ jobs:
 
   test-frontend:
     docker:
-      - image: cimg/node:14.4.0
+      - image: cimg/node:13.8.0
     steps:
       - checkout
       - restore_cache:
@@ -83,7 +83,7 @@ jobs:
 
   test-backend:
     docker:
-      - image: cimg/node:14.4.0
+      - image: cimg/node:13.8.0
     steps:
       - checkout
       - restore_cache:
@@ -100,7 +100,7 @@ jobs:
             
   scan-frontend:
     docker:
-      - image: cimg/node:14.4.0
+      - image: cimg/node:13.8.0
     steps:
       - checkout
       - restore_cache:
@@ -116,7 +116,7 @@ jobs:
 
   scan-backend:
     docker:
-      - image: cimg/node:14.4.0
+      - image: cimg/node:13.8.0
     steps:
       - checkout
       - restore_cache:
@@ -128,11 +128,12 @@ jobs:
             npm install
             npm audit fix --force --audit-level=critical
             npm audit fix --force --audit-level=critical
+            npm audit fix --force --audit-level=critical
             npm npm audit --audit-level=critical
 
 #   deploy-infrastructure:
 #     docker:
-#       - image: cimg/node:14.4.0 that supports AWS CLI
+#       - image: cimg/node:13.8.0 that supports AWS CLI
 #     steps:
 #       # Checkout code from git
 #       - run:
@@ -166,7 +167,7 @@ jobs:
 
 #   configure-infrastructure:
 #     docker:
-#       - image: cimg/node:14.4.0 that supports Ansible
+#       - image: cimg/node:13.8.0 that supports Ansible
 #     steps:
 #       # Checkout code from git
 #       # Add ssh keys with fingerprint
@@ -185,7 +186,7 @@ jobs:
 
 #   run-migrations:
 #     docker:
-#       - image: cimg/node:14.4.0 that supports NodeJS
+#       - image: cimg/node:13.8.0 that supports NodeJS
 #     steps:
 #       # Checkout code from git
 #       - run:
@@ -202,7 +203,7 @@ jobs:
 
 #   deploy-frontend:
 #     docker:
-#       - image: cimg/node:14.4.0 that supports AWS CLI
+#       - image: cimg/node:13.8.0 that supports AWS CLI
 #     steps:
 #       # Checkout code from git
 #       - run:
@@ -223,7 +224,7 @@ jobs:
                     
 #   deploy-backend:
 #     docker:
-#       - image: cimg/node:14.4.0 that supports Ansible
+#       - image: cimg/node:13.8.0 that supports Ansible
 #     steps:
 #       # Checkout code from git
 #       # Add ssh keys with fingerprint
@@ -263,7 +264,7 @@ jobs:
 
 #   cloudfront-update:
 #     docker:
-#       - image: cimg/node:14.4.0 that supports AWS CLI
+#       - image: cimg/node:13.8.0 that supports AWS CLI
 #     steps:
 #       # Checkout code from git
 #       - run:
@@ -278,7 +279,7 @@ jobs:
 
 # cleanup:
 #     docker:
-#       - image: cimg/node:14.4.0
+#       - image: cimg/node:13.8.0
 #     steps:
 #       # Checkout code from git
 #       - run:
