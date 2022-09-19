@@ -6,7 +6,7 @@
 
 - name: "unzip backend"     
   unarchive:
-     scr: artifact.tar.gz
+     src: artifact.tar.gz
      dest: ~/backend-app
 
 - name: "setup node depends"     
