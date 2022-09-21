@@ -342,6 +342,7 @@ jobs:
                 exit 0
               else
                 echo "ROLLING BACK!"
+                echo "Don't give up!"
                 exit 1
               fi
         - run:
